@@ -51,7 +51,7 @@ class AdminBannerAdapter() : RecyclerView.Adapter<AdminBannerAdapter.AdminBanner
     override fun getItemCount(): Int = bannersRef.size
 
     override fun onBindViewHolder(holder: AdminBannerViewHolder, position: Int) {
-        if (position > bannersRef.size) {
+        if (position < bannersRef.size) {
             val imageRef = bannersRef[position]
             imageRef.downloadUrl.addOnSuccessListener { uri ->
                 holder.bind(uri.toString())
@@ -60,4 +60,9 @@ class AdminBannerAdapter() : RecyclerView.Adapter<AdminBannerAdapter.AdminBanner
             }
         }
     }
+
+    init {
+        fetchBanners()
+    }
+
 }

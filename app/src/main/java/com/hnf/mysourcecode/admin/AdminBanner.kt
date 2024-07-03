@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.hnf.mysourcecode.R
 import com.hnf.mysourcecode.databinding.ActivityAdminBannerBinding
 
@@ -20,6 +21,6 @@ class AdminBanner : AppCompatActivity() {
 
         adapter = AdminBannerAdapter()
         binding.rvAdminBanner.adapter = adapter
-
+        binding.rvAdminBanner.layoutManager = LinearLayoutManager(this)
     }
 }
