@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "733887904002",
+    "project_id": "sourcecode-fe147",
+    "storage_bucket": "sourcecode-fe147.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733887904002:android:9070ad1acb868a2d7f2a1b",
+        "android_client_info": {
+          "package_name": "com.hnf.mysourcecode"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD15r_u12KVbSno_ZjqQkz7KFqoefgsf7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
