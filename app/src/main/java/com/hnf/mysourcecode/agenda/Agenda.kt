@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.firestore
 import com.hnf.mysourcecode.databinding.ActivityAgendaBinding
+import java.text.SimpleDateFormat
+import java.util.Date
 
 class Agenda : AppCompatActivity() {
 
@@ -25,9 +27,16 @@ class Agenda : AppCompatActivity() {
                 listData.clear()
 
                 for (document in it) {
+
+                    val timestamp = document.get("tanggal") as com.google.firebase.Timestamp
+                    val milliseconds = timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000
+                    val sdf = SimpleDateFormat("MM/dd/yyyy")
+                    val netDate = Date(milliseconds)
+                    val formattedDate = sdf.format(netDate)
+
                     listData.add(AgendaModel(
                         document.get("nama").toString(),
-                        document.get("tanggal").toString(),
+                        timestamp,
                         document.get("undangan").toString(),
                         document.get("kategori").toString()
                     ))
