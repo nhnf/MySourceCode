@@ -21,6 +21,7 @@ class Agenda : AppCompatActivity() {
         setContentView(binding.root)
 
         bd.collection("agenda")
+            .orderBy("tanggal")
             .get()
             .addOnSuccessListener {
                 val listData: ArrayList<AgendaModel> = ArrayList()
