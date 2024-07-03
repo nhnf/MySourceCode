@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MySourceCode"
         tools:targetApi="31">
         <activity
+            android:name=".admin.AdminActivity"
+            android:exported="false" />
+        <activity
             android:name=".agenda.Agenda"
             android:exported="false" />
         <activity

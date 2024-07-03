@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.hnf.mysourcecode.admin.AdminActivity
 import com.hnf.mysourcecode.admin.AdminBanner
 import com.hnf.mysourcecode.agenda.Agenda
 import com.hnf.mysourcecode.banner.Banner
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btAdmin.setOnClickListener {
-            Intent(this, AdminBanner::class.java)
+            Intent(this, AdminActivity::class.java)
                 .apply { startActivity(this) }
         }
 
