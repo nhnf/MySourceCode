@@ -22,6 +22,5 @@ class AdminActivity : AppCompatActivity() {
             Intent(this, AdminBanner::class.java)
                 .apply { startActivity(this) }
         }
-//        adsas
     }
 }
