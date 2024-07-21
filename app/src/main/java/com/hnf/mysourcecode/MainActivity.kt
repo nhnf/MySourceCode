@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.hnf.mysourcecode.admin.AdminActivity
 import com.hnf.mysourcecode.admin.AdminBanner
 import com.hnf.mysourcecode.agenda.Agenda
+import com.hnf.mysourcecode.bacaan.EditSizeActivity
 import com.hnf.mysourcecode.banner.Banner
 import com.hnf.mysourcecode.databinding.ActivityMainBinding
 import com.hnf.mysourcecode.quote.Quote
@@ -40,6 +41,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.btAgenda.setOnClickListener {
             Intent(this, Agenda::class.java)
+                .apply { startActivity(this) }
+        }
+
+        binding.btEditSize.setOnClickListener {
+            Intent(this, EditSizeActivity::class.java)
                 .apply { startActivity(this) }
         }
     }
