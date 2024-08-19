@@ -13,6 +13,7 @@ import com.hnf.mysourcecode.agenda.Agenda
 import com.hnf.mysourcecode.bacaan.EditSizeActivity
 import com.hnf.mysourcecode.banner.Banner
 import com.hnf.mysourcecode.databinding.ActivityMainBinding
+import com.hnf.mysourcecode.fragment.HostFragment
 import com.hnf.mysourcecode.quote.Quote
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment, HostFragment())
+            .addToBackStack(null)
+            .commit()
 
         binding.btSlider.setOnClickListener {
             Intent(this, Banner::class.java)
